@@ -13,6 +13,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link href="styles/main.css?29072019" rel="stylesheet">
+    <script src="js/core/jquery.3.2.1.min.js"></script>
     <style>
         #particles-js {
             height: 1200px;
@@ -21,6 +22,24 @@
 </head>
 
 <body id="top">
+     <div class="preloader">
+        <div class="loader">
+            <span class="box"></span>
+            <span class="box"></span>
+            <div class="code">
+                <img src="images/logo_square_light.png" width="120px">
+            </div>
+            <span class="txt">LOADING CODE...</span>
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $(window).load(function() {
+                $('.preloader').delay(2000).fadeOut(500);
+            })
+        })
+    </script>
     <script src="js/typed.js"></script>
     <script src="js/particles.js"></script>
     <header>
@@ -784,7 +803,7 @@
             console.log('callback - particles.js config loaded');
         });
     </script>
-    <script src="js/core/jquery.3.2.1.min.js"></script>
+   
     <script src="js/core/popper.min.js"></script>
     <script src="js/core/bootstrap.min.js"></script>
     <script src="js/now-ui-kit.js?v=1.1.0"></script>
